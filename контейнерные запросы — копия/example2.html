@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контейнерные запросы</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Примеры конетйнерных запросов</h1>
+
+        <p>Инструкция</p>
+        <ol>
+            <li>Простестируйте приложение. Измените ширину экрана от 390px до 2000px. Как и меняется структура блока диалога и формы?</li>
+            <li>В какие моменты происходит изменение структры этих компонентов?</li>
+            <li>Проанадизируйте css-код c 63 по 159 строки.</li>          
+        </ol>
+    </div>
+    <div class="grid_container">
+        <div class="dialog_wrapper">
+            <div class="dialog">
+                <div class="my-message">Сообщение 1</div>
+                <div class="my-message">Уточнение сообщения 1</div>
+                <div class="strange-message">Подробный развернутый ответ на уточненное сообщение 1</div>
+                <div class="my-message">Согласие</div>
+                <div class="strange-message">Еще вопрос</div>
+                <div class="my-message">Ответ</div>
+            </div>
+        </div>
+        <div class="form_wrapper">
+            <form action="" >
+                <div class="form_container">
+                    <div class="form_col">
+                        <div class="form_item">
+                            <label for="name">Введите имя</label><br>
+                            <input type="text" id="name">
+                        </div>
+                        <div class="form_item">
+                            <label for="tel">Введите телефон</label><br>
+                            <input type="tel" id="tel">
+                        </div>
+                        <div class="form_item">
+                            <label for="email">Введите почту</label><br>
+                            <input type="email" id="email">
+                        </div>
+                    </div>
+                    <div class="form_col">
+                        <div class="form_item">
+                            <label for="message">Введите сообщение</label><br>
+                            <textarea name="message" id="" rows="9"></textarea>
+                        </div>
+                        <div class="form_item">
+                            <input type="submit" value="Отправить">
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
