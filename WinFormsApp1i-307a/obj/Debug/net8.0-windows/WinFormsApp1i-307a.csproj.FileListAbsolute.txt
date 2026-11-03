@@ -1,0 +1,16 @@
+C:\Users\24300603\source\repos\WinFormsApp1i-307a\WinFormsApp1i-307a\bin\Debug\net8.0-windows\WinFormsApp1i-307a.exe
+C:\Users\24300603\source\repos\WinFormsApp1i-307a\WinFormsApp1i-307a\bin\Debug\net8.0-windows\WinFormsApp1i-307a.deps.json
+C:\Users\24300603\source\repos\WinFormsApp1i-307a\WinFormsApp1i-307a\bin\Debug\net8.0-windows\WinFormsApp1i-307a.runtimeconfig.json
+C:\Users\24300603\source\repos\WinFormsApp1i-307a\WinFormsApp1i-307a\bin\Debug\net8.0-windows\WinFormsApp1i-307a.dll
+C:\Users\24300603\source\repos\WinFormsApp1i-307a\WinFormsApp1i-307a\bin\Debug\net8.0-windows\WinFormsApp1i-307a.pdb
+C:\Users\24300603\source\repos\WinFormsApp1i-307a\WinFormsApp1i-307a\obj\Debug\net8.0-windows\WinFormsApp1i_307a.Calculator.resources
+C:\Users\24300603\source\repos\WinFormsApp1i-307a\WinFormsApp1i-307a\obj\Debug\net8.0-windows\WinFormsApp1i-307a.csproj.GenerateResource.cache
+C:\Users\24300603\source\repos\WinFormsApp1i-307a\WinFormsApp1i-307a\obj\Debug\net8.0-windows\WinFormsApp1i-307a.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\24300603\source\repos\WinFormsApp1i-307a\WinFormsApp1i-307a\obj\Debug\net8.0-windows\WinFormsApp1i-307a.AssemblyInfoInputs.cache
+C:\Users\24300603\source\repos\WinFormsApp1i-307a\WinFormsApp1i-307a\obj\Debug\net8.0-windows\WinFormsApp1i-307a.AssemblyInfo.cs
+C:\Users\24300603\source\repos\WinFormsApp1i-307a\WinFormsApp1i-307a\obj\Debug\net8.0-windows\WinFormsApp1i-307a.csproj.CoreCompileInputs.cache
+C:\Users\24300603\source\repos\WinFormsApp1i-307a\WinFormsApp1i-307a\obj\Debug\net8.0-windows\WinFormsApp1i-307a.dll
+C:\Users\24300603\source\repos\WinFormsApp1i-307a\WinFormsApp1i-307a\obj\Debug\net8.0-windows\refint\WinFormsApp1i-307a.dll
+C:\Users\24300603\source\repos\WinFormsApp1i-307a\WinFormsApp1i-307a\obj\Debug\net8.0-windows\WinFormsApp1i-307a.pdb
+C:\Users\24300603\source\repos\WinFormsApp1i-307a\WinFormsApp1i-307a\obj\Debug\net8.0-windows\WinFormsApp1i-307a.genruntimeconfig.cache
+C:\Users\24300603\source\repos\WinFormsApp1i-307a\WinFormsApp1i-307a\obj\Debug\net8.0-windows\ref\WinFormsApp1i-307a.dll
