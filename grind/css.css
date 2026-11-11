@@ -1,3 +1,6 @@
+/* ==========================================================================
+   1. Сброс стилей и основные настройки (строго по макету)
+   ========================================================================== */
 * {
     margin: 0;
     padding: 0;
@@ -5,80 +8,163 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    color: #2a2524; /* Цвет текста (text) */
+    background-color: #ffffff; /* Цвет основного фона (main-body) */
     min-height: 100vh;
     display: grid;
     grid-template-rows: auto 1fr auto;
 }
 
+a {
+    text-decoration: none;
+    color: inherit;
+    display: inline-block;
+}
+
+button {
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* Общий контейнер */
 .container {
     max-width: 1440px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
-
-header, footer {
-    padding: 20px 0;
-    background-color: #f8f8f8;
-}
-
-.header__content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.footer__content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.nav__link, .header__link, .footer__link {
-    text-decoration: none;
-    color: #2A2524;
-    margin-right: 15px;
+/* Интерактивные элементы (минимальный размер 44x44px для доступности) */
+a, button {
     min-width: 44px;
     min-height: 44px;
     display: inline-flex;
     align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s ease, opacity 0.2s ease;
 }
 
-.nav__link:hover, .header__link:hover, .footer__link:hover {
+/* Ховеры и состояния с использованием бордового цвета (hover) */
+a:hover, button:hover {
+    background-color: rgba(128, 0, 32, 0.08); /* Легкий оттенок или бордовый */
+}
+
+.card__btn:hover, .footer__submit-btn:hover, .footer__social-link:hover {
+    background-color: #7b0d1e; /* Бордовый цвет ховера (hover) */
+    color: #ffffff;
+}
+
+a:focus, button:focus {
+    outline: 2px solid #2a2524;
+    outline-offset: 2px;
+}
+
+a:active, button:active {
     opacity: 0.7;
 }
 
-.nav__link:active, .header__link:active, .footer__link:active {
-    opacity: 0.5;
+/* ==========================================================================
+   2. Шапка (Header)
+   ========================================================================== */
+.header {
+    border-bottom: 1px solid #dcdcdc; /* Линия футера / разделитель (footnote line) */
+    padding: 15px 0;
 }
 
-.nav__link:focus, .header__link:focus, .footer__link:focus, .card__btn:focus, .footer__btn:focus {
-    outline: 2px solid #000;
+.header__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
+.nav {
+    display: flex;
+    gap: 30px;
+}
 
+.nav__link {
+    font-size: 14px;
+    color: #2a2524;
+}
+
+.header__contacts {
+    display: flex;
+    gap: 20px;
+    font-size: 14px;
+}
+
+.menu-btn {
+    display: none;
+}
+
+/* ==========================================================================
+   3. Секция Hero (Баннер)
+   ========================================================================== */
+.hero {
+    padding: 60px 0;
+    background-color: #d8d8d8; /* Цвет баннера (banner) */
+}
+
+.hero__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 40px;
+}
+
+.hero__title {
+    font-size: 42px;
+    line-height: 1.2;
+    font-weight: 500;
+    margin-bottom: 20px;
+    color: #2a2524;
+}
+
+.hero__subtitle {
+    font-size: 18px;
+    color: #555555;
+}
+
+.hero__img {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+/* ==========================================================================
+   4. Секция Каталог (Grid + Subgrid)
+   ========================================================================== */
 .catalog {
-    padding: 40px 0;
+    padding: 60px 0;
+    background-color: #ffffff; /* Цвет main-body */
 }
 
-.catalog h2 {
-    font-size: 28px;
-    margin-bottom: 30px;
+.catalog__title {
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 40px;
+    color: #2a2524;
 }
 
 .catalog__container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     column-gap: 9vw;
-    gap: 0 135px; 
 }
 
 .card {
     display: grid;
     grid-row: span 3;
     grid-template-rows: subgrid;
-    background: #eaeaea;
+    background: #eaeaea; /* Цвет карточек (cards) */
     border-radius: 2px;
     padding: 20px;
     margin-bottom: 50px;
@@ -87,44 +173,38 @@ header, footer {
 .card__header {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
+    gap: 10px;
 }
 
 .card__title {
-    font-size: 16px;
-    font-weight: normal;
+    font-size: 14px;
+    font-weight: 400;
+    color: #2a2524;
 }
 
 .card__btn {
-    background: transparent;
-    border: none;
-    cursor: pointer;
-    width: 44px;
-    height: 44px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.card__btn:hover {
-    opacity: 0.6;
-}
-
-.card__btn:active {
-    transform: scale(0.95);
+    min-width: 44px;
+    min-height: 44px;
+    padding: 0;
+    justify-content: flex-end;
+    align-items: flex-start;
 }
 
 .card__img {
     width: 100%;
     height: auto;
-    display: block;
+    object-fit: contain;
+    background-color: #ffffff;
+    border-radius: 8px;
+    margin: 15px 0;
 }
 
-/* чето с теском */
 .card__description {
     margin-top: 20px;
     font-size: 20px;
     line-height: 28px;
+    color: #2a2524;
     display: -webkit-box;
     -webkit-line-clamp: 2;
     line-clamp: 2;
@@ -132,20 +212,26 @@ header, footer {
     overflow: hidden;
 }
 
-
+/* ==========================================================================
+   5. Секция Галерея (Grid Template Areas)
+   ========================================================================== */
 .gallery {
-    padding: 40px 0;
+    padding: 60px 0;
+    background-color: #ffffff;
 }
 
-.gallery h2 {
-    font-size: 28px;
-    margin-bottom: 30px;
+.gallery__title {
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 40px;
+    color: #2a2524;
 }
 
 .gallery__container {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: repeat(5, 204px);
+    gap: 0px;
     grid-template-areas:
         "img1 img1 img1 img2 img2 img2 img2 img2 img2 img3 img3 img3"
         "img1 img1 img1 img2 img2 img2 img2 img2 img2 img3 img3 img3"
@@ -170,46 +256,166 @@ header, footer {
 .gallery__img--8 { grid-area: img8; }
 .gallery__img--9 { grid-area: img9; }
 
+/* ==========================================================================
+   6. Подвал (Footer)
+   ========================================================================== */
+.footer {
+    background-color: #cccccc; /* Цвет футера (footer) */
+    padding: 60px 0 30px 0;
+    border-top: 1px solid #bcbcbc; /* Линия в футере (footnote line) */
+}
+
+.footer__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1.5fr;
+    gap: 40px;
+}
+
+.footer__brand {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.footer__contacts {
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer__contact-item {
+    font-size: 14px;
+    justify-content: flex-start;
+    color: #2a2524;
+}
+
+.footer__socials {
+    display: flex;
+    gap: 10px;
+}
+
+.footer__social-link {
+    width: 44px;
+    height: 44px;
+    background-color: #2a2524; /* Цвет текста/элементов */
+    color: #ffffff;
+    border-radius: 4px;
+    font-size: 12px;
+}
+
+.footer__heading {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #2a2524;
+}
+
+.footer__links-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.footer__link {
+    font-size: 14px;
+    justify-content: flex-start;
+    color: #2a2524;
+}
+
+.footer__copyright-mobile {
+    display: none;
+}
 
 .footer__form {
     display: flex;
-    align-items: center;
+    margin-bottom: 40px;
 }
 
 .footer__input {
+    flex: 1;
     height: 44px;
-    padding: 0 10px;
-    border: 1px solid #ccc;
+    padding: 0 15px;
+    border: 1px solid #2a2524; /* Линия (footnote line) */
+    border-right: none;
+    font-size: 14px;
+    background: #ffffff;
+    color: #2a2524;
 }
 
-.footer__btn {
+.footer__submit-btn {
     width: 44px;
     height: 44px;
-    background: #000;
-    border: none;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    background-color: #2a2524;
+    border: 1px solid #2a2524;
 }
 
+.footer__bottom {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    color: #555555;
+}
+
+/* ==========================================================================
+   7. Адаптивность и медиа-запросы
+   ========================================================================== */
 
 @media (max-width: 1024px) {
     .catalog__container {
         grid-template-columns: repeat(auto-fit, minmax(185px, 1fr));
         column-gap: 4vw;
     }
+
+    .footer__container {
+        grid-template-columns: 1fr 1fr;
+    }
 }
 
-
 @media (max-width: 768px) {
+    .header__contacts, .nav {
+        display: none;
+    }
+
+    .menu-btn {
+        display: flex;
+    }
+
+    .hero__container {
+        grid-template-columns: 1fr;
+        text-align: left;
+    }
+
+    .hero__title {
+        font-size: 28px;
+    }
+
     .gallery__container {
-        grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: auto;
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: repeat(7, 140px);
         grid-template-areas:
-            "img1 img2 img2 img2"
-            "img8 img7 img7 img3"
-            "img6 img6 img5 img3"
-            "img4 img4 img4 img9";
+            "img1 img1 img2 img2 img2 img2"
+            "img1 img1 img2 img2 img2 img2"
+            "img8 img8 img7 img7 img3 img3"
+            "img8 img8 img7 img7 img3 img3"
+            "img6 img6 img6 img5 img5 img3"
+            "img4 img4 img4 img4 img4 img9"
+            "img4 img4 img4 img4 img4 img9";
+    }
+
+    .footer__container {
+        grid-template-columns: 1fr;
+    }
+
+    .footer__bottom {
+        display: none;
+    }
+
+    .footer__copyright-mobile {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 30px;
+        font-size: 12px;
     }
 }
